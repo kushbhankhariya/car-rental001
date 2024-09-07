@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Car Rental Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        .custom-bg{
+            background-color: #2ec1ac;
+        }
+        .custom-bg:hover{
+            background-color: #276e8c;
+        }
+    </style>
+</head>
+
+
+<body class="bg-light">
+
+ <!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-ly-2 shadow-sm sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand me-5 fw-bold fs-3 " href="file:///D:/project/car/h.html#">Prime car rental</a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link  me-2 fw-bold" aria-current="page" href="h.html#">Home</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link me-2 fw-bold" href="cars.html">cars</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link me-2 fw-bold" href="contectus.html">contect us</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link me-2 fw-bold " href="aboutus.html">about us</a>
+                 </li>
+                </ul>
+        <div class="d-flex">
+            <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginmodel">
+                 Login
+            </button>
+            <button type="button" class="btn btn-outline-dark shadow-none " data-bs-toggle="modal" data-bs-target="#Registermodel">
+                 Register
+            </button>
+        </div>
+        </div>
+    </div>
+</nav>
+
+ <!--login page-->
+ <div class="modal fade" id="loginmodel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <form>
+                <div class="modal-header">
+                    <h5 class="modal-title d-flex align-item-center">
+                        <i class="bi bi-person-circle fs-3 me-3"></i>user login
+                    </h5>
+                    <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control shadow-none" >
+                    </div class="mb-3">
+                        <label class="form-label">password</label>
+                        <input type="password" class="form-control shadow-none" >
+                     </div>
+                     <div class="d-flex align-item-center justify-content-between m-4">
+                        <button type="submit" class="btn btn-dark shadow-none]=">LOGIN</button>
+                        <a href="javascript: void(0)" class="text-secondary text-decoration-none">forgot password?</a> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+ </div>
+
+ <!--registation page-->
+ <div class="modal fade" id="Registermodel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+             <form>
+                <div class="modal-header">
+                    <h5 class="modal-title d-flex align-item-center">
+                    <i class="bi bi-person-lines-fill fs-3 me-3"></i>user registration
+                    </h5>
+                    <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <span class="badge bg-light text-dark mb-3 text-wrap lh-base">
+                    note:your details must match with your ID(driving license, aadhaar card,etc..)
+                    it will be required during booking.And user must be 18+.
+                </span>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 ps-0 mb-3">
+                            <label class="form-label">name</label>
+                            <input type="text" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-6 p-0 mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control shadow-none" >
+                        </div> 
+                        <div class="col-md-6 ps-0 mb-3">
+                            <label class="form-label">phone number</label>
+                            <input type="number" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-6 p-0 mb-3">
+                            <label class="form-label">picture</label>
+                            <input type="file" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-12 p-0 mb-3">
+                            <label class="form-label">Address</label>
+                            <textarea class="form-control shadow-none" rows="1"></textarea>
+                        </div>
+                        <div class="col-md-6 ps-0 mb-3">
+                            <label class="form-label">pincode</label>
+                            <input type="number" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-6 p-0 mb-3">
+                            <label class="form-label">date of birth</label>
+                            <input type="date" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-6 p-0 mb-3">
+                            <label class="form-label">aadhaar card</label>
+                            <input type="file" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-6 p-0 mb-3">
+                            <label class="form-label">driving liencse</label>
+                            <input type="file" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-6 ps-0 mb-3">
+                            <label class="form-label">password</label>
+                            <input type="password" class="form-control shadow-none" >
+                        </div>
+                        <div class="col-md-6 p-0 mb-3">
+                            <label class="form-label">conform password</label>
+                            <input type="password" class="form-control shadow-none" >
+                        </div>
+                        
+                    </div>
+                    <div class="tect-center my-1">
+                    <button type="submit" class="btn btn-dark shadow-none]=">Register</button>
+                </div>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+ </div>
+
+<!-- car bg image-->
+ <div class="container-fluid px-lg-4 mt-4">
+    <div class="swiper swiper-container">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="car1.jpg" class="w-100 l-1000"/>
+        </div>
+        </div>
+    </div>
+ </div>
+<br><br>
+
+<!-- check booking availablity form-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 bg-white shadow me-4  rounded">
+            <br>
+            <h5 class="mb-4">Check Booking Availablity</h5>
+              <form>
+                    <div class="row align-item-end">
+                        <div class="col-lg-3">
+                            <label class="form-label" style="font-weight:500;">Event date</label>
+                            <input type="date" class="form-control shadow-none">
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="form-label" style="font-weight:500;">Arrival time </label>
+                            <input type="time" class="form-control shadow-none">
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="form-label" style="font-weight:500;">Departure time </label>
+                            <input type="time" class="form-control shadow-none">
+                        </div>
+                        <div class="col-lg-3">
+                            <label class="form-label" style="font-weight:500;">Venu address</label>
+                            <textarea class="form-control shadow-none" rows="1"></textarea>
+                        </div>
+                        <div class="col-lg-1">
+                            <button type="submit" class="btn text-white shadow-none custom-bg m-4">submit</button>
+                        </div>
+                    </div>
+                    <br>
+              </form>
+        </div>
+    </div>
+</div>
+
+<!-- cars-->
+ <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Cars</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 my-3">
+                    <div class="card border-0 shadow" style="max-width: 350px; margin:auto;">
+                        <img src="car6.jpg" class="card-img-top" >
+                        <div class="card-body">
+                        <h5>Mercedes s-class</h5>
+                        <h6 class="mb-4">₹5000/hr</h6>
+                        <p class="card-text">Mercedes-Benz has launched the locally assembled seventh-gen S-Class in India.</p>
+                            <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Top Speed   250 kmph
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Active Noise Cancellation
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Massage Seats
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                            Transmission     Automatic
+                            </span>
+                            </div>
+                            <div class="rating mb-4">
+                                <h6 class="mb-1">Rating</h6>
+                                    <span class="badge rounded-pill bg-light">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-sm tetx-white custom-bg shadow-none">Book Now</a>
+                                <a href="#" class="btn btn-sm btn-outline-dark shadow-none">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!---->
+                <div class="col-lg-4 col-md-6 my-3">
+                    <div class="card border-0 shadow" style="max-width: 350px; margin:auto;">
+                        <img src="car11.jpg" class="card-img-top" >
+                        <div class="card-body">
+                        <h5>BMW 7 series</h5>
+                        <h6 class="mb-4">₹6000/hr</h6>
+                        <p class="card-text">BMW 7 series is the top notch car which is available from BMW in India.</p>
+                            <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Top Speed   300 kmph
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Automatic Climate Control
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Alloy Wheels
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Memory Function For Seats
+                            </span>
+                            </div>
+                            <div class="rating mb-4">
+                                <h6 class="mb-1">Rating</h6>
+                                    <span class="badge rounded-pill bg-light">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-sm tetx-white custom-bg shadow-none">Book Now</a>
+                                <a href="#" class="btn btn-sm btn-outline-dark shadow-none">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!---->
+                <div class="col-lg-4 col-md-6 my-3">
+                    <div class="card border-0 shadow" style="max-width: 350px; margin:auto;">
+                        <img src="car12.jpg" class="card-img-top" >
+                        <div class="card-body">
+                        <h5>Audi a8</h5>
+                        <h6 class="mb-4">₹4000/hr</h6>
+                        <p class="card-text">The Audi A8 has 1 Petrol Engine on offer. The Petrol engine is 2995 cc </p>
+                            <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Top Speed   280 kmph
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Power Windows Front 
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Air Suspension
+                            </span>
+                            <span class="badge bg-light text-dark text-wrap text-base">
+                                    Ventilated Disc
+                            </span>
+                            </div>
+                            <div class="rating mb-4">
+                                <h6 class="mb-1">Rating</h6>
+                                    <span class="badge rounded-pill bg-light">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </span>
+                            </div>
+                            <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-sm tetx-white custom-bg shadow-none">Book Now</a>
+                                <a href="#" class="btn btn-sm btn-outline-dark shadow-none">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 text-center mt-5">
+                    <a href="file:///D:/project/car/cars.html" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Cars>>></a>
+                </div>
+            </div>
+        </div>
+<br>
+<!--Facilites-->
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Our Facilites</h2>
+
+        <div class="container">
+            <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+                <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                    <img src="driver.png" width="100">
+                    <h5 class="mt-3">Driver</h5>
+                </div>
+                <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                    <img src="maintenance.png" width="100">
+                    <h5 class="mt-3">car repare</h5>
+                </div>
+                <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                    <img src="car-rent.png" width="100">
+                    <h5 class="mt-3">24x7 car rental services</h5>
+                </div>
+                <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                    <img src="car.png" width="100">
+                    <h5 class="mt-3">convoy cars</h5>
+                </div>
+                <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                    <img src="24-hours-support.png" width="100">
+                    <h5 class="mt-3">24x7 customer support </h5>
+                </div>
+            </div>
+        </div>
+<br><br>
+
+<!-- Testimonials -->
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Testimonials</h2>
+<div class="container">
+    <div class="swiper swiper-TESTIMONIALS ">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg-white p-4 ">
+                <div class="profile d-flex align-item-center mb-3">
+                  <img src="man.png" width="30px">
+                  <h6 class="m-0 ms-2">Suresh Reddy</h6>
+                </div>
+                <p>
+                    The rental car was spotless and ran smoothly throughout our trip. The pickup and return process was seamless, and customer service was top-notch. Highly recommend for stress-free travel
+                </p>
+                 <div class="rating">
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                 </div>
+            </div>
+            <div class="swiper-slide bg-white p-4 ">
+                <div class="profile d-flex align-item-center mb-3">
+                  <img src="man1.png" width="30px">
+                  <h6 class="m-0 ms-2">Vikas Gupta</h6>
+                </div>
+                <p>
+                    The car was in excellent condition, and we had no issues during our entire vacation. Affordable rates and friendly staff made the experience even better. Will definitely rent again
+                </p>
+                 <div class="rating">
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                 </div>
+            </div>
+            <div class="swiper-slide bg-white p-4 ">
+                <div class="profile d-flex align-item-center mb-3">
+                  <img src="man2.png" width="30px">
+                  <h6 class="m-0 ms-2">Anil Kumar</h6>
+                </div>
+                <p>
+                    Quick, easy, and efficient! The rental car was clean, well-maintained, and perfect for our road trip. Customer service was responsive and helpful. Great experience overall."
+                </p>
+                 <div class="rating">
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                 </div>
+            </div>
+            <div class="swiper-slide bg-white p-4 ">
+                <div class="profile d-flex align-item-center mb-3">
+                  <img src="man3.png" width="30px">
+                  <h6 class="m-0 ms-2">Prashant Joshi</h6>
+                </div>
+                <p>
+                    The car was practically brand new and handled perfectly. Super convenient pickup location and an easy return process. Excellent value for the price!"
+                </p>
+                 <div class="rating">
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                     <i class="bi bi-star-fill text-warning"></i>
+                 </div>
+            </div>
+            
+        </div>
+    <div class="swiper-pagination"></div>
+    </div>
+    <div class="col-lg-12 text-center mt-5">
+                    <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Know More >>></a>
+                </div>
+</div>
+
+<!-- reach us -->
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">REACH US</h2>
+   <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+        <iframe class="w-100 rounded" height="320px"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12411.470582919155!2d72.53732412873532!3d23.042370285001386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84accfba3217%3A0x50ce549f7e9a9730!2sDrive%20In%20Rd%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1725613055237!5m2!1sen!2sin" loading="lazy"></iframe>
+    </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="bg-white p-4 rounded mb-4">
+                <h5>CALL US</h5>
+                <a href="tel: =+917016720311" class="d-inline-block mb-2 text-decoration-none text-dark">
+                <i class="bi bi-telephone-fill"></i>+917016720311 Kush Bhankhariya
+                </a>
+                <br>
+                <a href="tel: =+917016720311" class="d-inline-block mb-2 text-decoration-none text-dark">
+                <i class="bi bi-telephone-fill"></i>+919879614180 Manan Patel
+                </a>
+            </div>
+            <div class="bg-white p-4 rounded mb-4">
+                <h5>For any kind of quary contact us on</h5>
+                <a href="https://www.instagram.com/" class="d-inline-block mb-2 ">
+                    <span class="badge bg-light text-dark fs-6 p-2">
+                    <i class="bi bi-instagram me-1"></i>Instagram
+                    </span>
+                </a><br>
+                <a href="https://www.facebook.com/" class="d-inline-block mb-2 ">
+                    <span class="badge bg-light text-dark fs-6 p-2">
+                    <i class="bi bi-facebook me-1"></i>Facebook
+                    </span>
+                </a><br>
+                <a href="https://www.youtube.com/" class="d-inline-block ">
+                    <span class="badge bg-light text-dark fs-6 p-2">
+                    <i class="bi bi-envelope me-1"></i>gmail
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <!--footer-->
+<div class="container-fluid bg-white mt-5">
+    <div class="row">
+        <div class="col-lg-4 p-4">
+            <h3 class="h-font fw-bold fs-3 mb-2"> car rental</h3>
+            <p>
+                We are here to provide you the best car rental service for your special days like weadding, birthday , anniversary,etc..<br> 
+                We will provide you our car, our driver and you just have to seat back and relax. 
+            </p>
+        </div>
+        <div class="col-lg-4 p-4">
+            <h5 class="mb-3">Links</h5>
+            <a href="h.html" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a><br>
+            <a href="cars.html" class="d-inline-block mb-2 text-dark text-decoration-none">Cars</a><br>
+            <a href="contectus.html" class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a><br>
+            <a href="aboutus.html" class="d-inline-block mb-2 text-dark text-decoration-none"> about us</a>
+        </div>
+        <div class="col-lg-4 p-4">
+                <h5 class="mb-3">FOLLOW us</h5>
+                <a href="https://www.instagram.com/" class="d-inline-block  text-dark text-decoration-none mb-2 ">
+                <i class="bi bi-instagram me-1"></i>Instagram</a><br>
+                <a href="https://www.facebook.com/" class="d-inline-block  text-dark text-decoration-none mb-2 ">
+                <i class="bi bi-facebook me-1"></i>Facebook</a><br>
+                <a href="https://www.youtube.com/" class="d-inline-block  text-dark text-decoration-none ">
+                <i class="bi bi-youtube me-1"></i>Youtube</a><br>
+        </div>
+    </div>
+</div>
+
+<!--script-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script>
+    var swiper = new Swiper(".swiper-TESTIMONIALS", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      slidesPerView:"3",
+      loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoint:{
+        320:{
+            slidesPerView:1,
+        },
+        640:{
+            slidesPerView:1,
+        },
+        768:{
+            slidesPerView:2,
+        },
+        1024:{
+            slidesPerView:3,
+        }
+      }
+    });
+</script>
+
+</body>
+</body>
+</html>
