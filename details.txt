@@ -1,0 +1,25 @@
+front end
+
+HTML, CSS, JAVASCRIPT, AJAX, bootstrap 5,swiperjs
+----------------------------------------------------------------------------------------
+back end
+
+php,my sql
+----------------------------------------------------------------------------------------
+user end
+
+car booking
+checking available booking
+managing booking(changing car, changing date)
+giving review and ratings
+user login and registration
+profile management
+online payment
+-----------------------------------------------------------------------------------------
+admin end
+
+car management(add, modify or delete a car)
+manage user (view, delete, ban-unban)
+booking management(arrival status , booking changes, refunds on cancellation )
+finalize booking
+generating invoice
